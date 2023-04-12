@@ -1,6 +1,4 @@
 body {
-  margin: 0;
-  overflow: hidden;
   background-color: antiquewhite;
 }
 
@@ -8,6 +6,18 @@ body {
   position: relative;
   width: 100%;
   aspect-ratio: 16/9;
+  pointer-events: none;
+}
+
+.bar {
+  z-index: 999;
+  position: relative;
+  height: 0;
+  width: 80%;
+  background-color: aqua;
+  border: 0.5px dotted rgb(0, 128, 255);
+  top: 100%;
+  left: 5%;
 }
 
 #ui {
@@ -18,15 +28,4 @@ body {
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-}
-
-.bar {
-  z-index: 999;
-  position: absolute;
-  height: 75px;
-  width: 20px;
-  background-color: aqua;
-  border: rgb(0, 208, 255) solid 2px;
-  top: 100%;
-  left: 5%;
 }
